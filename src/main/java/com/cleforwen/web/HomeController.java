@@ -41,6 +41,6 @@ public class HomeController {
     	logger.debug("text id: "+message.getId());
     	logger.debug("Message : "+message.getText());
     	messageRepository.create(message);
-    	return "home";
+    	return "redirect:../home";
     }
 }
