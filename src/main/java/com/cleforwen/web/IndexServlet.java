@@ -22,7 +22,7 @@ public class IndexServlet extends HttpServlet {
 	private static final Logger log = LoggerFactory
 			.getLogger(IndexServlet.class);
 
-	private MessageRepository messageRepository = new MessageRepository();
+	//private MessageRepository messageRepository = new MessageRepository();
 	
 	@Override
 	protected void doGet(HttpServletRequest request,
@@ -41,11 +41,11 @@ public class IndexServlet extends HttpServlet {
 		}
 
 		// get
-		Collection<Message> messages = messageRepository.getAll();
-		request.setAttribute("messages", messages);
+		//Collection<Message> messages = messageRepository.getAll();
+		//request.setAttribute("messages", messages);
 
 		if (log.isDebugEnabled()) {
-			log.debug("messages: " + messages);
+		//	log.debug("messages: " + messages);
 		}
 
 		forward(request, response, "index.jsp");
@@ -72,7 +72,7 @@ public class IndexServlet extends HttpServlet {
 
 		Message message = new Message();
 		message.setText(text);
-		messageRepository.create(message);
+		//messageRepository.create(message);
 	}
 
 	protected void deleteMessage(HttpServletRequest request) throws IOException {
@@ -80,7 +80,7 @@ public class IndexServlet extends HttpServlet {
 		if (log.isDebugEnabled()) {
 			log.debug("deleting message with id: " + id);
 		}
-		messageRepository.deleteById(id);
+		//messageRepository.deleteById(id);
 	}
 
 	/**
