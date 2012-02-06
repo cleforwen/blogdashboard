@@ -1,0 +1,16 @@
+.DS_Store?
+Thumbs.db
+.classpath
+.project
+.settings/
+.springBeans
+target/
+*.ipr
+*.iml
+*.iws
+.idea
+bin
+.metadata
+/file
+MANIFEST.MF
+*.jasper
